@@ -79,9 +79,9 @@ static Eigen::Vector2d invF_T(const Eigen::Vector2d &a,
 template <typename T>
 static Eigen::Vector2d tildeF_T(const Eigen::Vector2d &a,
                                 const Eigen::Vector2d &p0, const T &gamma) {
-  if (abs(a(1) - 1) < 2 * SFEMPP_ZERO_TOLERANCE) return gamma.f(1);
-  if (abs(a(0) - 1) < 2 * SFEMPP_ZERO_TOLERANCE) return gamma.f(0);
-  if (abs(a(0)) + abs(a(1)) < 2 * SFEMPP_ZERO_TOLERANCE)
+  if (std::abs(a(1) - 1) < 2 * SFEMPP_ZERO_TOLERANCE) return gamma.f(1);
+  if (std::abs(a(0) - 1) < 2 * SFEMPP_ZERO_TOLERANCE) return gamma.f(0);
+  if (std::abs(a(0)) + std::abs(a(1)) < 2 * SFEMPP_ZERO_TOLERANCE)
     return p0;
   else
     return (1 - a(0) - a(1)) * (p0 + a(1) / (1 - a(1)) * gamma.f(1)) +
@@ -91,7 +91,7 @@ static Eigen::Vector2d tildeF_T(const Eigen::Vector2d &a,
 template <typename T>
 static Eigen::Vector2d dtildeF_Tdx(const Eigen::Vector2d &a,
                                    const Eigen::Vector2d &p0, const T &gamma) {
-  if (abs(a(1) - 1) < 2 * SFEMPP_ZERO_TOLERANCE)
+  if (std::abs(a(1) - 1) < 2 * SFEMPP_ZERO_TOLERANCE)
     return gamma.f(1) - p0 - gamma.df(1);
   else
     return 1 / (1 - a(1)) * gamma.f(a(1)) -
@@ -102,7 +102,7 @@ static Eigen::Vector2d dtildeF_Tdx(const Eigen::Vector2d &a,
 template <typename T>
 static Eigen::Vector2d dtildeF_Tdy(const Eigen::Vector2d &a,
                                    const Eigen::Vector2d &p0, const T &gamma) {
-  if (abs(a(1) - 1) < 2 * SFEMPP_ZERO_TOLERANCE)
+  if (std::abs(a(1) - 1) < 2 * SFEMPP_ZERO_TOLERANCE)
     return gamma.f(1) - p0;
   else
     return (1 - a(0) / ((1 - a(1)) * (1 - a(1)))) * gamma.f(1) - p0 +

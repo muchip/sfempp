@@ -2,11 +2,11 @@
 #include "../SFEMPP/src/util/TicToc.h"
 
 int main(int argc, char *argv[]) {
-  TicToc T;
+  SFEMPP::TicToc T;
   int maxlvl = 6;
   // geometry and mesh
   T.tic();
-  SFEMPP::Kite domain;
+  SFEMPP::UQshape domain;
   SFEMPP::Mesh myMesh(domain);
   myMesh.refine(maxlvl).setCurved(domain);
   myMesh.printGeometry(Eigen::VectorXd::Zero(myMesh.nP().back()), maxlvl,

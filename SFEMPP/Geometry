@@ -35,5 +35,6 @@
 #include "src/geometry/Lshape.h"
 #include "src/geometry/Star.h"
 #include "src/geometry/Square.h"
+#include "src/geometry/UQshape.h"
 
 #endif
