@@ -1,0 +1,11 @@
+.DS_Store
+*.o
+*.out
+*.swp
+html/
+build/
+*.vtk
+*.h5
+*.dSYM
+*.egg-info/
+__pycache__/

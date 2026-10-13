@@ -1,0 +1,39 @@
+// This file is part of SFEMPP, a lightwight stochastic FEM package.
+//
+// Copyright (c) 2023, Michael Multerer
+//
+// All rights reserved.
+//
+// This source code is subject to the GNU Affero General Public License v3.0
+// license and without any warranty, see <https://github.com/muchip/FMCA>
+// for further information.
+//
+
+/**
+ *  \ingroup Modules
+ *  \defgroup Geometry Geometry
+ *  \brief Collects all functionality for parametric domains
+ *
+ **/
+ 
+#ifndef SFEMPP_GEOMETRY_MODULE_
+#define SFEMPP_GEOMETRY_MODULE_
+
+#include <cmath>
+#include <vector>
+
+#include <Eigen/Dense>
+
+#include "src/util/Macros.h"
+
+#include "src/geometry/Transformations.h"
+#include "src/geometry/ParametrisationBase.h"
+#include "src/geometry/Parametrisation.h"
+
+#include "src/geometry/Disc.h"
+#include "src/geometry/Kite.h"
+#include "src/geometry/Lshape.h"
+#include "src/geometry/Star.h"
+#include "src/geometry/Square.h"
+
+#endif

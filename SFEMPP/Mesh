@@ -1,0 +1,33 @@
+// This file is part of SFEMPP, a lightwight stochastic FEM package.
+//
+// Copyright (c) 2023, Michael Multerer
+//
+// All rights reserved.
+//
+// This source code is subject to the GNU Affero General Public License v3.0
+// license and without any warranty, see <https://github.com/muchip/FMCA>
+// for further information.
+//
+
+/**
+ *  \ingroup Modules
+ *  \defgroup Mesh Mesh
+ *  \brief Collects all functionality for Meshes
+ *
+ **/
+#ifndef SFEMPP_MESH_MODULE_
+#define SFEMPP_MESH_MODULE_
+
+#include "src/util/Macros.h"
+
+#include <Eigen/Dense>
+#include <fstream>
+#include <iomanip>
+#include <string>
+#include <vector>
+
+#include "Geometry"
+
+#include "src/mesh/Mesh.h"
+
+#endif

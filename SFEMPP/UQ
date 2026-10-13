@@ -1,0 +1,37 @@
+// This file is part of SFEMPP, a lightwight stochastic FEM package.
+//
+// Copyright (c) 2023, Michael Multerer
+//
+// All rights reserved.
+//
+// This source code is subject to the GNU Affero General Public License v3.0
+// license and without any warranty, see <https://github.com/muchip/SFEMPP>
+// for further information.
+//
+
+/**
+ *  \ingroup Modules
+ *  \defgroup UQ UQ
+ *  \brief Collects all functionality for UQ
+ *
+ **/
+#ifndef SFEMPP_UQ_MODULE_
+#define SFEMPP_UQ_MODULE_
+
+
+#include <Eigen/Dense>
+#include <fstream>
+#include <iostream>
+#include <iomanip>
+#include <string>
+#include <vector>
+
+#include "FEM"
+
+#include "src/util/Macros.h"
+
+#include "src/uq/CovarianceKernel.h"
+#include "src/uq/PivotedCholesky.h"
+#include "src/uq/KarhunenLoeveMF.h"
+
+#endif

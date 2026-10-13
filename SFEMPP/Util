@@ -1,0 +1,7 @@
+#ifndef __SFEMPP_UTIL__
+#define __SFEMPP_UTIL__
+
+#include "./src/util/print2m.h"
+#include "./src/util/TicToc.h"
+
+#endif
